@@ -29,5 +29,12 @@ public class functions : MonoBehaviour
 	{
 		return Math.Abs (value1 - value2) <= acceptableDifference; 
 	}
+	public static string ConvertNumber(int num)
+	{
+		if (num>= 1000)
+			return string.Concat(Math.Round( float.Parse(num+"")/ 1000,2), "k");
+		else
+			return num.ToString();
+ 	}
 
 }
